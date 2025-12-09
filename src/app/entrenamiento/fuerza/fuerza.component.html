@@ -1,47 +1,7 @@
-<div class="container py-5 fade-in">
-  <div class="text-center mb-5">
-    <h2 class="display-4 fw-bold text-uppercase mb-3">Entrenamiento de Fuerza</h2>
-    <p class="lead text-muted">Selecciona tu nivel y comienza a transformar tu cuerpo</p>
-  </div>
-
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col" *ngFor="let rutina of rutinas">
-      <div class="card h-100 border-0 shadow-lg card-rutina overflow-hidden">
-        <div class="card-img-wrapper position-relative">
-          <img [src]="rutina.imagen" class="card-img-top" [alt]="rutina.titulo" />
-          <div class="overlay"></div>
-        </div>
-
-        <div class="card-body p-4 d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <span
-              class="badge rounded-pill px-3 py-2"
-              [ngClass]="{
-                'bg-success': rutina.nivel === 'Básico',
-                'bg-warning text-dark': rutina.nivel === 'Intermedio',
-                'bg-danger': rutina.nivel === 'Avanzado'
-              }"
-              >{{ rutina.nivel }}</span
-            >
-            <span class="text-muted small fw-bold">⏱ {{ rutina.duracion }}</span>
-          </div>
-
-          <h4 class="card-title fw-bold mb-3">{{ rutina.titulo }}</h4>
-          <p class="card-text text-secondary mb-4 flex-grow-1">{{ rutina.descripcion }}</p>
-
-          <div class="ejercicios-list p-3 rounded bg-light border-start border-4 border-primary">
-            <h6 class="fw-bold mb-2 text-uppercase small text-primary">Ejercicios Clave:</h6>
-            <ul class="list-unstyled mb-0">
-              <li
-                *ngFor="let ejercicio of rutina.ejercicios"
-                class="mb-1 d-flex align-items-center small text-dark"
-              >
-                <span class="bullet me-2"></span> {{ ejercicio }}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<app-rutina-grid
+  title="Entrenamiento de Fuerza"
+  subtitle="Selecciona tu nivel y comienza a transformar tu cuerpo"
+  [rutinas]="rutinas"
+  theme="primary"
+>
+</app-rutina-grid>
