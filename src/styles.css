@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: rgb(16, 173, 50);
+  margin: 0;
+}
+.logo {
+  width: 90px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+/* NAVBAR */
+nav {
+  height: 100px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit !important;
+}
+
+.menu a:hover {
+  color: rgb(16, 173, 50) !important; /* Color verde al pasar el ratón, opcional */
+  text-decoration: none;
+}
+h2 {
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+
+.footer-box {
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  display: flex;
+
+  a {
+    color: rgb(0, 0, 0);
+  }
+  button {
+    background-color: rgb(16, 173, 50);
+    border: none;
+    border-radius: 18px;
+    margin: 5px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.414);
+  }
+}

@@ -1,0 +1,59 @@
+/* estilos_menu.css - Versión con celdas de comidas en amarillo muy claro */
+
+/* --- Estilos Generales de la Tabla --- */
+.menu-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Encabezado: Fila de Tiempos de Comida (Día, Desayuno, etc.) */
+.table-header {
+  background-color: #fff9c4; /* Amarillo clarito para el encabezado */
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.table-header th {
+  padding: 15px 10px;
+}
+
+/* Celdas del Cuerpo de la Tabla */
+.menu-table td,
+.menu-table th {
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 1px solid #14a33f;
+}
+
+/* AÑADIDO: Fondo amarillo muy clarito para todas las filas del cuerpo (incluye los td) */
+.menu-table tbody tr {
+  background-color: #f8f89a; /* Un color Crema/Amarillo casi blanco, muy sutil */
+}
+
+/* Columna de Días de la Semana */
+.col-dia {
+  background-color: #ffeb3b; /* Amarillo vibrante para la columna de días */
+  color: #333333;
+  font-weight: 600;
+  width: 10%;
+  border-right: 2px solid #e0e0e0;
+}
+
+/* Estilo al pasar el ratón (hover) */
+/* El hover ahora es ligeramente más oscuro para notarse sobre el fondo amarillo claro */
+.menu-table tr:hover {
+  background-color: #fffacd; /* Un amarillo un poco más intenso al pasar el ratón */
+  transition: background-color 0.3s ease;
+}
+
+/* Última fila sin borde inferior */
+.menu-table tbody tr:last-child td,
+.menu-table tbody tr:last-child th {
+  border-bottom: none;
+}

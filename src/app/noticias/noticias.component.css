@@ -1,0 +1,23 @@
+.noticias-box,
+.infantil-box,
+.jugadoras-box {
+  width: 100%;
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.imagen-noticia {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.imagen-infantil {
+  width: 500px;
+  height: 1000px;
+  border-radius: 12px;
+  background-color: transparent !important;
+}

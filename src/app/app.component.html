@@ -1,1 +1,67 @@
-<p>app works!</p>
+<nav class="navbar sticky-top bg-body-tertiary d-flex">
+  <div class="logo-box container-fluid justify-content-around">
+    <a class="navbar-brand p-0 mb-1" href="/">
+      <img src="assets/escudos/logo-udvillalba.png" class="logo" alt="Logo UD Villalba" />
+    </a>
+    <div>
+      <ul class="menu d-flex list-unstyled gap-5 fw-semibold mb-0">
+        <a routerLink="/inicio" class="text-decoration-none text-dark"><li>INICIO</li></a>
+        <a routerLink="/jornada" class="text-decoration-none text-dark"><li>JORNADA</li></a>
+        <a routerLink="" class="text-decoration-none text-dark"><li>CLASIFICACIÓN</li></a>
+        <a routerLink="/entrenamiento-extra" class="text-decoration-none text-dark"
+          ><li>ENTRENAMIENTO EXTRA</li></a
+        >
+        <a routerLink="/menu" class="text-decoration-none text-dark"><li>MENÚ</li></a>
+        <a routerLink="/noticias" class="text-decoration-none text-dark"><li>NOTICIAS</li></a>
+      </ul>
+    </div>
+    <em class="eslogan fs-5">Un escudo, una ilusión</em>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer
+  class="footer-box d-flex flex-column flex-md-row align-items-center justify-content-around pb-3 bg-light mt-5"
+>
+  <a class="footer-brand pt-3" href="/">
+    <img src="assets/escudos/logo-udvillalba.png" class="logo" alt="Logo Footer" />
+  </a>
+
+  <div class="pt-3 fs-5 text-center">
+    <b>Ciudad Deportiva Collado Villalba</b> <br />
+    <div class="d-flex justify-content-center align-items-center mt-2 gap-2">
+      <a
+        href="https://maps.app.goo.gl/m6SW1WwhZfXH7oWAA"
+        target="_blank"
+        class="text-decoration-none btn btn-outline-dark border-0"
+      >
+        <i class="bi bi-geo-alt fs-4"></i>
+      </a>
+      <a href="tel:658029169" class="text-decoration-none btn btn-outline-dark border-0">
+        <i class="bi bi-telephone fs-4"></i>
+      </a>
+      <a
+        href="mailto:info@udvillalba.es"
+        class="text-decoration-none btn btn-outline-dark border-0"
+      >
+        <i class="bi bi-envelope fs-4"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="rrss pt-4 d-flex gap-4 justify-content-center">
+    <a class="instagram fs-2 text-dark" href="https://www.instagram.com/udvillalba/" target="_blank"
+      ><i class="bi bi-instagram"></i
+    ></a>
+    <a
+      class="facebook fs-2 text-dark"
+      href="https://www.facebook.com/p/Udvillalba-61577008330622/"
+      target="_blank"
+      ><i class="bi bi-facebook"></i
+    ></a>
+    <a class="twitter fs-2 text-dark" href="https://x.com/udvillalba" target="_blank"
+      ><i class="bi bi-twitter-x"></i
+    ></a>
+  </div>
+</footer>
