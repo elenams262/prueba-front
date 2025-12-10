@@ -13,6 +13,8 @@ import { ClasificacionComponent } from './clasificacion/clasificacion.component'
 
 import { MenuEntrenamientoComponent } from './entrenamiento/menu-entrenamiento/menu-entrenamiento.component';
 
+import { AuthComponent } from './auth/auth.component';
+
 export const routes: Routes = [
   // Redirecciona la ruta raíz a la página de inicio
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -36,4 +38,5 @@ export const routes: Routes = [
   },
   { path: 'menu', component: MenuComponent },
   { path: 'clasificacion', component: ClasificacionComponent },
+  { path: 'login', component: AuthComponent },
 ];

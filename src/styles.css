@@ -28,6 +28,20 @@ nav {
   color: rgb(16, 173, 50) !important; /* Color verde al pasar el ratón, opcional */
   text-decoration: none;
 }
+.login-link {
+  background-color: rgb(16, 173, 50);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.login-link:hover {
+  background-color: rgb(13, 140, 40);
+  transform: scale(1.05);
+  color: white !important;
+}
+
 h2 {
   color: rgb(0, 0, 0);
   letter-spacing: 2px;

@@ -1,0 +1,55 @@
+.auth-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/imagenes/infantil-femenino.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s ease;
+}
+
+.auth-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.btn-accion {
+  background-color: rgb(16, 173, 50);
+  border-color: rgb(16, 173, 50);
+  transition: all 0.3s ease;
+}
+
+.btn-accion:hover {
+  background-color: rgb(13, 140, 40);
+  border-color: rgb(13, 140, 40);
+  transform: translateY(-2px);
+}
+
+.btn-toggle:hover {
+  background-color: #f8f9fa;
+  color: rgb(16, 173, 50);
+  border-color: rgb(16, 173, 50);
+}
+
+/* Animación suave al cambiar de modo (opcional) */
+form {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

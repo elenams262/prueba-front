@@ -1,0 +1,95 @@
+<div class="auth-container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-4 auth-card">
+    <div class="card-body text-center">
+      <img src="assets/escudos/logo-udvillalba.png" alt="Logo" class="auth-logo mb-4" />
+
+      <h2 class="card-title fw-bold mb-4">{{ isLoginMode ? 'Iniciar Sesión' : 'Registrarse' }}</h2>
+
+      <form (ngSubmit)="onSubmit()">
+        <!-- Email Login -->
+        <div class="mb-3 text-start" *ngIf="isLoginMode">
+          <label for="loginEmail" class="form-label">Correo Electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="loginEmail"
+            [(ngModel)]="loginData.email"
+            name="loginEmail"
+            required
+          />
+        </div>
+
+        <!-- Password Login -->
+        <div class="mb-3 text-start" *ngIf="isLoginMode">
+          <label for="loginPassword" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="loginPassword"
+            [(ngModel)]="loginData.password"
+            name="loginPassword"
+            required
+          />
+        </div>
+
+        <!-- Email Registro -->
+        <div class="mb-3 text-start" *ngIf="!isLoginMode">
+          <label for="registerEmail" class="form-label">Correo Electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="registerEmail"
+            [(ngModel)]="registerData.email"
+            name="registerEmail"
+            required
+          />
+        </div>
+
+        <!-- Password Registro -->
+        <div class="mb-3 text-start" *ngIf="!isLoginMode">
+          <label for="registerPassword" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="registerPassword"
+            [(ngModel)]="registerData.password"
+            name="registerPassword"
+            required
+          />
+        </div>
+
+        <!-- Confirmar Contraseña (Solo Registro) -->
+        <div class="mb-3 text-start" *ngIf="!isLoginMode">
+          <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            [(ngModel)]="registerData.confirmPassword"
+            name="confirmPassword"
+            required
+          />
+        </div>
+
+        <!-- Botón de Acción -->
+        <button type="submit" class="btn btn-primary w-100 fw-bold py-2 mt-2 btn-accion">
+          {{ isLoginMode ? 'Entrar' : 'Crear Cuenta' }}
+        </button>
+      </form>
+
+      <!-- Botón Toggle -->
+      <div class="mt-4 pt-3 border-top">
+        <p class="mb-2 text-muted small">
+          {{ isLoginMode ? '¿No tienes cuenta?' : '¿Ya tienes cuenta?' }}
+        </p>
+        <button
+          type="button"
+          class="btn btn-outline-secondary w-100 rounded-pill btn-toggle"
+          (click)="toggleMode()"
+        >
+          {{ isLoginMode ? 'Regístrate aquí' : 'Inicia Sesión aquí' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
