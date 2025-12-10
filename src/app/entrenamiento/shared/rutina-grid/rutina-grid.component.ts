@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'; // Importa Component y Input desde el núcleo de Angular
 import { CommonModule } from '@angular/common'; // Importa módulos comunes como ngIf y ngFor
-import { Rutina } from '../../models/rutina.model'; // Importa la definición de nuestro modelo de datos
+import { Rutina } from '../../../models/rutina.model'; // Importa la definición de nuestro modelo de datos
 
 @Component({
   selector: 'app-rutina-grid', // El nombre de la etiqueta HTML para usar este componente: <app-rutina-grid>

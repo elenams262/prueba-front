@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RutinaGridComponent } from '../shared/rutina-grid/rutina-grid.component';
-import { EntrenamientoService } from '../services/entrenamiento.service';
-import { Rutina } from '../models/rutina.model';
+import { EntrenamientoService } from '../../services/entrenamiento.service';
+import { Rutina } from '../../models/rutina.model';
 
 @Component({
   selector: 'app-velocidad',

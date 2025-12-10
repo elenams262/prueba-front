@@ -1,17 +1,42 @@
-<h2 class="noticias text-center p-1" id="noticias">NOTICIAS</h2>
-<section class=" rounded d-flex col-12 justify-content-around align-items-start p-3 m-3">
-  <div class="noticias-box row w-100 text-center">
-    <div class="col-md-4 mb-3">
-      <h2 class="fs-4">Buen trabajo del equipo vs Electrocor</h2>
-      <img src="assets/imagenes/vs-electrocor.jpg" class="imagen-noticia rounded img-fluid" alt="Partido Electrocor">
-    </div>
-    <div class="col-md-4 mb-3">
-      <h2 class="fs-4">El sábado jugamos a las 12:00 en Las Rozas</h2>
-      <img src="assets/imagenes/campo-las-rozas.png" class="imagen-noticia rounded img-fluid" alt="Campo Las Rozas">
-    </div>
-    <div class="col-md-4 mb-3">
-      <h2 class="fs-4">Reunión de familias <br>martes 18:30</h2>
-      <img src="assets/imagenes/reunión-de familia.png" class="imagen-noticia rounded img-fluid" alt="Reunión">
+<div class="container py-5 fade-in">
+  <div class="text-center mb-5">
+    <h2 class="display-4 fw-bold text-uppercase mb-3">Últimas Noticias</h2>
+    <p class="lead text-muted">Mantente al día con todas las novedades del club</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let noticia of listaNoticias">
+      <div class="card h-100 border-0 shadow-sm card-noticia">
+        <div class="card-img-wrapper position-relative">
+          <!-- Placeholder si la imagen no carga, o usa la imagen del modelo -->
+          <img
+            [src]="noticia.imagen"
+            class="card-img-top"
+            [alt]="noticia.titulo"
+            onerror="this.src='assets/placeholder.jpg'"
+          />
+          <div
+            class="categoria-badge badge bg-primary position-absolute top-0 end-0 m-3"
+            *ngIf="noticia.categoria"
+          >
+            {{ noticia.categoria }}
+          </div>
+        </div>
+
+        <div class="card-body d-flex flex-column p-4">
+          <div class="text-muted small mb-2 d-flex align-items-center">
+            <i class="bi bi-calendar-event me-2"></i>
+            {{ noticia.fecha | date : 'longDate' : '' : 'es' }}
+          </div>
+
+          <h5 class="card-title fw-bold mb-3 text-dark">{{ noticia.titulo }}</h5>
+          <p class="card-text text-secondary mb-4 flex-grow-1">{{ noticia.descripcion }}</p>
+
+          <button class="btn btn-outline-primary btn-sm rounded-pill align-self-start fw-bold px-4">
+            Leer más
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+</div>

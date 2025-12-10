@@ -1,23 +1,52 @@
-.noticias-box,
-.infantil-box,
-.jugadoras-box {
-  width: 100%;
-  max-width: 1500px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 16px;
+/* Animaciones de entrada */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos de la tarjeta */
+.card-noticia {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-.imagen-noticia {
-  width: 400px;
-  height: 500px;
+
+.card-noticia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Imagen */
+.card-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  transition: transform 0.5s ease;
 }
-.imagen-infantil {
-  width: 500px;
-  height: 1000px;
-  border-radius: 12px;
-  background-color: transparent !important;
+
+.card-noticia:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Tipografía */
+.card-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* O la fuente que uses en tu proyecto */
+  letter-spacing: -0.5px;
 }
