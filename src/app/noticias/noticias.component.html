@@ -5,32 +5,83 @@
   </div>
 
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col" *ngFor="let noticia of listaNoticias">
+    <div class="col">
       <div class="card h-100 border-0 shadow-sm card-noticia">
         <div class="card-img-wrapper position-relative">
-          <!-- Placeholder si la imagen no carga, o usa la imagen del modelo -->
           <img
-            [src]="noticia.imagen"
+            src="assets/img/partido.jpeg"
             class="card-img-top"
-            [alt]="noticia.titulo"
-            onerror="this.src='assets/placeholder.jpg'"
+            alt="Victoria del equipo"
+            onerror="this.src='assets/img/placeholder.jpg'"
           />
-          <div
-            class="categoria-badge badge bg-primary position-absolute top-0 end-0 m-3"
-            *ngIf="noticia.categoria"
-          >
-            {{ noticia.categoria }}
+          <div class="categoria-badge badge bg-primary position-absolute top-0 end-0 m-3">
+            Partidos
           </div>
         </div>
-
         <div class="card-body d-flex flex-column p-4">
           <div class="text-muted small mb-2 d-flex align-items-center">
             <i class="bi bi-calendar-event me-2"></i>
-            {{ noticia.fecha | date : 'longDate' : '' : 'es' }}
+            09 de Diciembre de 2025
           </div>
+          <h5 class="card-title fw-bold mb-3 text-dark">Victoria luchada contra Las Rozas</h5>
+          <p class="card-text text-secondary mb-4 flex-grow-1">
+            Nuestras jugadoras del Alevín A demostraron que nunca se rinden. Tras ir perdiendo 1-0,
+            consiguieron remontar en los últimos minutos con dos goles espectaculares. ¡Seguimos
+            sumando puntos importantes!
+          </p>
+        </div>
+      </div>
+    </div>
 
-          <h5 class="card-title fw-bold mb-3 text-dark">{{ noticia.titulo }}</h5>
-          <p class="card-text text-secondary mb-4 flex-grow-1">{{ noticia.descripcion }}</p>
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm card-noticia">
+        <div class="card-img-wrapper position-relative">
+          <img
+            src="assets/img/entrenamiento.jpg"
+            class="card-img-top"
+            alt="Entrenamiento"
+            onerror="this.src='assets/img/placeholder.jpg'"
+          />
+          <div class="categoria-badge badge bg-success position-absolute top-0 end-0 m-3">Club</div>
+        </div>
+        <div class="card-body d-flex flex-column p-4">
+          <div class="text-muted small mb-2 d-flex align-items-center">
+            <i class="bi bi-calendar-event me-2"></i>
+            05 de Diciembre de 2025
+          </div>
+          <h5 class="card-title fw-bold mb-3 text-dark">¿Quieres jugar con nosotras?</h5>
+          <p class="card-text text-secondary mb-4 flex-grow-1">
+            Abrimos el plazo de pruebas para la categoría Infantil. Si te gusta el fútbol y quieres
+            formar parte de la familia del Villalba, ven a probar los martes y jueves a las 17:30.
+            ¡Te esperamos!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm card-noticia">
+        <div class="card-img-wrapper position-relative">
+          <img
+            src="assets/img/entrevista.jpeg"
+            class="card-img-top"
+            alt="Charla técnica"
+            onerror="this.src='assets/img/placeholder.jpg'"
+          />
+          <div class="categoria-badge badge bg-warning text-dark position-absolute top-0 end-0 m-3">
+            Eventos
+          </div>
+        </div>
+        <div class="card-body d-flex flex-column p-4">
+          <div class="text-muted small mb-2 d-flex align-items-center">
+            <i class="bi bi-calendar-event me-2"></i>
+            01 de Diciembre de 2025
+          </div>
+          <h5 class="card-title fw-bold mb-3 text-dark">Charla sobre Nutrición Deportiva</h5>
+          <p class="card-text text-secondary mb-4 flex-grow-1">
+            Este viernes tendremos una charla especial para padres y jugadoras sobre la importancia
+            de la alimentación antes de los partidos. Será en la sala de prensa del polideportivo.
+          </p>
         </div>
       </div>
     </div>
