@@ -1,9 +1,14 @@
 .auth-container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../../assets/imagenes/infantil-femenino.png');
+  background-image: url('../../assets/imagenes/infantil-femenino.png');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; Removed to allow scrolling to see full image */
+  min-height: calc(100vh - 100px); /* Full height minus nav */
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: -100px;
+  padding-top: 100px;
 }
 
 .auth-card {
