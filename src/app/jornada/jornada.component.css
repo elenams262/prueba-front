@@ -43,3 +43,9 @@ h2 {
   font-weight: bold;
   color: rgb(16, 173, 50);
 }
+.peque {
+  width: 100%;
+  max-width: 500px;
+  background-color: #f8f9fa; /* Light grey background to distinguish it inside */
+  border-radius: 12px;
+}

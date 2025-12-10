@@ -1,0 +1,104 @@
+<div class="container py-5">
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <h2 class="display-4 fw-bold text-uppercase mb-3">Clasificación</h2>
+      <div class="d-flex justify-content-center">
+        <div class="border-bottom border-3 w-25"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="bg-light text-uppercase small fw-bold text-secondary">
+            <tr>
+              <th scope="col" class="text-center py-3">Pos</th>
+              <th scope="col" class="py-3">Equipo</th>
+              <th scope="col" class="text-center py-3">PTS</th>
+              <th scope="col" class="text-center py-3 d-none d-md-table-cell">PJ</th>
+              <th scope="col" class="text-center py-3 d-none d-lg-table-cell">PG</th>
+              <th scope="col" class="text-center py-3 d-none d-lg-table-cell">PE</th>
+              <th scope="col" class="text-center py-3 d-none d-lg-table-cell">PP</th>
+              <th scope="col" class="text-center py-3 d-none d-md-table-cell">GF</th>
+              <th scope="col" class="text-center py-3 d-none d-md-table-cell">GC</th>
+              <th scope="col" class="text-center py-3 d-none d-sm-table-cell">DG</th>
+              <th scope="col" class="text-center py-3 d-none d-lg-table-cell">Forma</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let equipo of clasificacion"
+              [ngClass]="{ 'table-active': equipo.nombre === 'UD Villalba' }"
+            >
+              <td class="text-center fw-bold">
+                <span
+                  class="position-badge rounded-circle d-inline-flex align-items-center justify-content-center"
+                  [ngClass]="getClassForPosition(equipo.posicion)"
+                >
+                  {{ equipo.posicion }}
+                </span>
+              </td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img [src]="equipo.escudo" [alt]="equipo.nombre" class="team-logo me-3" />
+                  <span class="fw-bold team-name">{{ equipo.nombre }}</span>
+                </div>
+              </td>
+              <td class="text-center fw-bold fs-5">{{ equipo.puntos }}</td>
+              <td class="text-center text-muted d-none d-md-table-cell">
+                {{ equipo.partidosJugados }}
+              </td>
+              <td class="text-center text-success d-none d-lg-table-cell">
+                {{ equipo.partidosGanados }}
+              </td>
+              <td class="text-center text-warning d-none d-lg-table-cell">
+                {{ equipo.partidosEmpatados }}
+              </td>
+              <td class="text-center text-danger d-none d-lg-table-cell">
+                {{ equipo.partidosPerdidos }}
+              </td>
+              <td class="text-center d-none d-md-table-cell">{{ equipo.golesFavor }}</td>
+              <td class="text-center d-none d-md-table-cell">{{ equipo.golesContra }}</td>
+              <td class="text-center fw-bold d-none d-sm-table-cell">
+                {{ equipo.diferenciaGoles }}
+              </td>
+              <td class="text-center d-none d-lg-table-cell">
+                <div class="d-flex justify-content-center gap-1">
+                  <span
+                    *ngFor="let resultado of equipo.forma"
+                    class="badge rounded-pill d-flex align-items-center justify-content-center form-badge"
+                    [ngClass]="getFormaClass(resultado)"
+                    [title]="
+                      resultado === 'G' ? 'Ganado' : resultado === 'E' ? 'Empatado' : 'Perdido'
+                    "
+                  >
+                    {{ resultado }}
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4 small text-muted">
+    <div class="col-md-6 d-flex gap-3 align-items-center">
+      <div class="d-flex align-items-center">
+        <span class="legend-color bg-success me-2 rounded-circle"></span>
+        Ascenso
+      </div>
+      <div class="d-flex align-items-center">
+        <span class="legend-color bg-warning me-2 rounded-circle"></span>
+        Play-off
+      </div>
+      <div class="d-flex align-items-center">
+        <span class="legend-color bg-danger me-2 rounded-circle"></span>
+        Descenso
+      </div>
+    </div>
+  </div>
+</div>

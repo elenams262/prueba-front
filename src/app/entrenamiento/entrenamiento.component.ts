@@ -12,19 +12,4 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router'; // Importa
   templateUrl: './entrenamiento.component.html',
   styleUrl: './entrenamiento.component.css',
 })
-export class EntrenamientoComponent {
-  // 1. Inyectar el Router en el constructor
-  constructor(public router: Router) {}
-
-  // 2. Función para determinar si mostrar las imágenes
-  // Las imágenes solo se muestran si la URL es EXACTAMENTE '/entrenamiento-extra'
-  // Si es '/entrenamiento-extra/fuerza', retorna false.
-  mostrarImagenes(): boolean {
-    // La propiedad 'url' del Router devuelve la URL actual.
-    // Comparamos si es la ruta base del componente padre.
-    return this.router.url === '/entrenamiento-extra';
-  }
-
-  // Las rutinas de ejemplo que tenías ya no son necesarias si solo usas este componente como un layout para los hijos.
-  // ...
-}
+export class EntrenamientoComponent {}

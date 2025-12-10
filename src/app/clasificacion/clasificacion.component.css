@@ -1,0 +1,54 @@
+.team-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.position-badge {
+  width: 25px;
+  height: 25px;
+  font-size: 0.8rem;
+}
+
+.ascenso-directo {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.playoff {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+.descenso {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.form-badge {
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  padding: 0;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+/* Hover effect on table rows */
+tbody tr {
+  transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.005);
+}
+
+.team-name {
+  color: #2c3e50;
+  white-space: nowrap;
+}
