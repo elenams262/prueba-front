@@ -35,6 +35,25 @@
       </div>
     </div>
   </section>
+  <div class="card-grid">
+    @for (player of playerSquad(); track player.name) {
+
+    <div class="player-card">
+      <div class="media-container">
+        <img class="card-image" [src]="player.photoUrl" [alt]="player.name" />
+        <video class="card-video" [src]="player.videoUrl" loop muted autoplay></video>
+      </div>
+
+      <div class="card-data">
+        <h3>{{ player.name }}</h3>
+        <p>
+          <span>Dorsal:</span> <strong>{{ player.dorsal }}</strong>
+        </p>
+        <p><span>Posición:</span> {{ player.posicion }}</p>
+      </div>
+    </div>
+    }
+  </div>
 
   <h2 class="noticias text-center p-1 text-yellow-brand" id="noticias">NOTICIAS</h2>
   <section class="rounded col-12 p-3 m-3">

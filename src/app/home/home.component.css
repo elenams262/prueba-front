@@ -41,3 +41,97 @@
   object-fit: cover;
   border-radius: 12px;
 }
+/* --- 1. Estructura del Grid (Rejilla) - AJUSTADA A 4 COLUMNAS --- */
+.card-grid {
+  display: grid;
+  /* Por defecto, 4 columnas de igual ancho (1fr) en pantallas grandes */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Adaptación para pantallas medianas (ej. tabletas) */
+@media (max-width: 1200px) {
+  .card-grid {
+    /* Reduce a 3 columnas para evitar que las tarjetas sean demasiado pequeñas */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Adaptación para pantallas pequeñas (ej. móviles) */
+@media (max-width: 768px) {
+  .card-grid {
+    /* Reduce a 2 columnas para una mejor legibilidad */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- 2. Estilo de la Tarjeta Individual --- */
+.player-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 3. Contenedor de Imagen/Video --- */
+.media-container {
+  height: 300px; /* Alto fijo, ajuste si lo necesita */
+  position: relative;
+}
+
+/* Reglas de Superposición para Imagen y Video */
+.card-image,
+.card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta y asegura que la imagen/video llenen el contenedor */
+  position: absolute; /* Permite superponerlos */
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Estado Inicial: Video oculto */
+.card-video {
+  opacity: 0;
+}
+
+/* EFECTO HOVER: Muestra el video y oculta la imagen */
+.player-card:hover .card-video {
+  opacity: 1; /* Hace el video visible */
+}
+
+.player-card:hover .card-image {
+  opacity: 0; /* Oculta la imagen */
+}
+
+/* --- 4. Estilos de los Datos de la Jugadora (Parte de abajo) --- */
+.card-data {
+  padding: 15px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.card-data h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  /* Cambiado el color a uno más fuerte para distinguirlo del texto de la posición */
+  color: #10a108;
+}
+
+.card-data p {
+  margin: 3px 0;
+  font-size: 0.9em;
+}
+
+.card-data span {
+  font-weight: 600;
+}
