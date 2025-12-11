@@ -68,14 +68,13 @@
 
 /* --- 2. Estilo de la Tarjeta Individual --- */
 .player-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #ddd; /* Mantenemos el borde pero podemos reducirlo si es necesario, lo dejaremos igual por ahora */
+  border-radius: 5px; /* Reducido de 8px a 6px */
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Reducida la sombra (de 4px 8px a 2px 4px) y la opacidad */
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-
 .player-card:hover {
   transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -83,7 +82,7 @@
 
 /* --- 3. Contenedor de Imagen/Video --- */
 .media-container {
-  height: 300px; /* Alto fijo, ajuste si lo necesita */
+  height: 450px; /* Alto fijo, ajuste si lo necesita */
   position: relative;
 }
 
