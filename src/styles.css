@@ -89,6 +89,9 @@ h2.text-white {
     margin: 5px;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.414);
   }
+
+footer.bg-light {
+  background-color: #f8f9fa !important;
 }
 
 .text-yellow-brand {
@@ -148,4 +151,9 @@ h2.text-white {
 .card-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: -0.5px;
+}
+
+footer .list-inline-item a:hover {
+  text-decoration: underline !important;
+  color: #212529 !important;
 }
