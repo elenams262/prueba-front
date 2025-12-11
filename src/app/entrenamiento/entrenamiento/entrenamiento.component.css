@@ -17,15 +17,23 @@ h2 {
 }
 
 .img-entrenamiento {
-  width: 22vw;
-  height: 22vw;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
   max-width: 300px;
-  max-height: 300px;
   object-fit: cover;
   border-radius: 12px;
-  cursor: pointer;
 }
-img:hover {
+.training-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+}
+
+.training-card:hover .img-entrenamiento {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
