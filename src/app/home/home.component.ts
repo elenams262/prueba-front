@@ -85,5 +85,19 @@ export class HomeComponent {
       photoUrl: 'assets/jugadoras/sara_foto.jpg',
       videoUrl: 'assets/jugadoras/sara_video.mp4',
     },
+    {
+      name: 'Sara Gil',
+      dorsal: 12,
+      posicion: 'Defensa Central',
+      photoUrl: 'assets/jugadoras/sara_foto.jpg',
+      videoUrl: 'assets/jugadoras/sara_video.mp4',
+    },
+    {
+      name: 'Sara Gil',
+      dorsal: 12,
+      posicion: 'Defensa Central',
+      photoUrl: 'assets/jugadoras/sara_foto.jpg',
+      videoUrl: 'assets/jugadoras/sara_video.mp4',
+    },
   ]);
 }
