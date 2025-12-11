@@ -1,6 +1,18 @@
-/* estilos_menu.css - Versión con celdas de comidas en amarillo muy claro */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
 
-/* --- Estilos Generales de la Tabla --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .menu-table {
   border-collapse: collapse;
   width: 100%;
