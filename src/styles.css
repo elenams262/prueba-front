@@ -95,3 +95,57 @@ h2.text-white {
   color: #ffcc00 !important; /* Amarillo "escudo" */
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5); /* Sombra dura para resaltar sobre el fondo verde */
 }
+
+/* GLOBAL NEWS CARD STYLES */
+/* Animaciones de entrada */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos de la tarjeta */
+.card-noticia {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-noticia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Imagen */
+.card-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-noticia:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Tipografía */
+.card-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -0.5px;
+}
