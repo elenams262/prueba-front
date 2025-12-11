@@ -7,9 +7,10 @@
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-h2 {
-  color: rgb(0, 0, 0);
-  letter-spacing: 2px;
+/* Remove generic h2 override to use global styles */
+
+.vs::after {
+  content: none !important; /* Hide the global h2 underline for the VS element */
 }
 .foto-infantil,
 .foto-rival-img {

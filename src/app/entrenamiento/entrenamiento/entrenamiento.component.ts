@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-menu-entrenamiento',
+  selector: 'app-entrenamiento',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './menu-entrenamiento.component.html',
-  styleUrls: ['./menu-entrenamiento.component.css'],
+  templateUrl: './entrenamiento.component.html',
+  styleUrls: ['./entrenamiento.component.css'],
 })
-export class MenuEntrenamientoComponent {}
+export class EntrenamientoComponent {}
