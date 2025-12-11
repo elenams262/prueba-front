@@ -51,7 +51,7 @@ h2 {
   margin-bottom: 1.5rem;
   padding-bottom: 10px;
   position: relative;
-  text-shadow: 2px 2px 0px #000000; /* Borde oscuro fuerte */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); /* Sombra difuminada pero visible */
 }
 
 /* Línea decorativa inferior para todos los H2 */
@@ -63,7 +63,7 @@ h2::after {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: rgb(16, 173, 50); /* Siempre verde para mantener identidad */
+  background-color: rgb(255, 255, 255); /* Siempre verde para mantener identidad */
   border-radius: 2px;
 }
 
@@ -97,7 +97,7 @@ footer.bg-light {
 
 .text-yellow-brand {
   color: #ffcc00 !important; /* Amarillo "escudo" */
-  text-shadow: 3px 3px 0px #000000; /* Borde/Sombra negra fuerte */
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.75); /* Sombra difuminada y no tan negra */
 }
 
 /* GLOBAL NEWS CARD STYLES */
