@@ -20,7 +20,7 @@ export class HomeComponent {
       dorsal: 10,
       posicion: 'Portera',
       photoUrl: 'assets/imagenes/portera.png',
-      videoUrl: 'assets/video/video_portera.mp4',
+      videoUrl: 'assets/video/video-portera.mp4',
     },
     {
       name: 'Elena Pérez',
@@ -55,7 +55,7 @@ export class HomeComponent {
       dorsal: 3,
       posicion: 'Lateral',
       photoUrl: 'assets/imagenes/jugadora6.png',
-      videoUrl: 'assets/',
+      videoUrl: 'assets/video/video-jugadora6.mp4',
     },
     {
       name: 'Paula Gómez',
@@ -87,17 +87,31 @@ export class HomeComponent {
     },
     {
       name: 'Susana Rodriguez',
-      dorsal: 12,
+      dorsal: 15,
       posicion: 'Defensa Central',
       photoUrl: 'assets/imagenes/jugadora4.png',
       videoUrl: 'assets/video/video-jugadora4.mp4',
     },
     {
       name: 'María Gonzalez',
-      dorsal: 12,
+      dorsal: 11,
       posicion: 'Defensa Central',
       photoUrl: 'assets/imagenes/jugadora6.png',
       videoUrl: 'assets/video/video-jugadora6.mp4',
     },
   ]);
+
+  onMouseEnter(video: HTMLVideoElement) {
+    if (video.src && video.src !== window.location.href) {
+      video.muted = true; // Ensure muted for autoplay policy
+      video.play().catch((err) => {
+        console.warn('Could not play video:', err);
+      });
+    }
+  }
+
+  onMouseLeave(video: HTMLVideoElement) {
+    video.pause();
+    video.currentTime = 0;
+  }
 }
