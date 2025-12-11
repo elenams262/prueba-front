@@ -183,7 +183,7 @@ footer .list-inline-item a:hover {
 .main-container {
   width: 100%;
   padding-bottom: 2rem;
-  padding-top: 110px; /* Reducido para subir los títulos (navbar es 100px) */
+  padding-top: 40px; /* Reducido para subir los títulos (navbar es 100px) */
   position: relative;
 }
 
