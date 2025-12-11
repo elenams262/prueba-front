@@ -74,6 +74,7 @@
 /* Typography Tweaks */
 h2 {
   letter-spacing: -0.02em;
+  color: #ffcc00;
 }
 
 .card-title {
