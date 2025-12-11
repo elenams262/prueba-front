@@ -4,11 +4,12 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 
 // 💡 1. Importación corregida (asumiendo player.model.ts)
 import { Player } from '../models/player.model';
+import { MerchandisingComponent } from '../merchandising/merchandising.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterLink, MerchandisingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
