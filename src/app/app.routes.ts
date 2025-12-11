@@ -3,15 +3,13 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { JornadaComponent } from './jornada/jornada.component';
-import { EntrenamientoComponent } from './entrenamiento/entrenamiento.component';
+import { EntrenamientoComponent } from './entrenamiento/entrenamiento/entrenamiento.component';
 import { MenuComponent } from './menu/menu.component';
 import { FuerzaComponent } from './entrenamiento/fuerza/fuerza.component';
 import { VelocidadComponent } from './entrenamiento/velocidad/velocidad.component';
 import { ResistenciaComponent } from './entrenamiento/resistencia/resistencia.component';
 import { PropiocepcionComponent } from './entrenamiento/propiocepcion/propiocepcion.component';
 import { ClasificacionComponent } from './clasificacion/clasificacion.component';
-
-import { MenuEntrenamientoComponent } from './entrenamiento/menu-entrenamiento/menu-entrenamiento.component';
 
 import { AuthComponent } from './auth/auth.component';
 
@@ -27,9 +25,10 @@ export const routes: Routes = [
   { path: 'jornada', component: JornadaComponent },
   {
     path: 'entrenamiento-extra',
-    component: EntrenamientoComponent,
+    // Removed component: EntrenamientoComponent here because it doesn't have <router-outlet>
+    // So we treat it as a grouping path, and set EntrenamientoComponent as the default child.
     children: [
-      { path: '', component: MenuEntrenamientoComponent }, // Ruta por defecto (menú)
+      { path: '', component: EntrenamientoComponent }, // Ruta por defecto (menú)
       { path: 'fuerza', component: FuerzaComponent },
       { path: 'velocidad', component: VelocidadComponent },
       { path: 'resistencia', component: ResistenciaComponent },
