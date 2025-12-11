@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
-  imports: [RouterLink, RouterOutlet, CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
 })
