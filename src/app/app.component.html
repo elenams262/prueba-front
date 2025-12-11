@@ -24,7 +24,19 @@
   </div>
 </nav>
 
-<router-outlet></router-outlet>
+<!-- Imagen de Fondo Global -->
+<div class="header-image-container w-100">
+  <img
+    src="assets/imagenes/infantil-femenino.png"
+    alt="Equipo Infantil Femenino"
+    class="img-fluid header-image"
+  />
+</div>
+
+<!-- Contenedor Principal (Empuja el contenido hacia abajo) -->
+<div class="main-container">
+  <router-outlet></router-outlet>
+</div>
 
 <footer class="bg-light pt-5">
   <div class="container pb-4">

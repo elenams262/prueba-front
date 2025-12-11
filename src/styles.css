@@ -158,3 +158,41 @@ footer .list-inline-item a:hover {
   text-decoration: underline !important;
   color: #212529 !important;
 }
+
+/* --- FONDO GLOBAL (Moved from Home) --- */
+.header-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  z-index: -1; /* Detrás del contenido */
+  overflow: hidden;
+}
+
+.header-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.05);
+  transform-origin: top;
+}
+
+/* Contenedor principal: Por defecto con poco padding (para páginas normales) */
+.main-container {
+  width: 100%;
+  padding-bottom: 2rem;
+  padding-top: 110px; /* Reducido para subir los títulos (navbar es 100px) */
+  position: relative;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-image-container {
+    height: 400px;
+  }
+  .main-container {
+    padding-top: 120px;
+  }
+}
