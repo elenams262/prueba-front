@@ -9,10 +9,21 @@
 <div class="card-grid">
   @for (player of playerSquad(); track player.name) {
 
-  <div class="player-card">
+  <div
+    class="player-card"
+    (mouseenter)="onMouseEnter(videoPlayer)"
+    (mouseleave)="onMouseLeave(videoPlayer)"
+  >
     <div class="media-container">
       <img class="card-image" [src]="player.photoUrl" [alt]="player.name" />
-      <video class="card-video" [src]="player.videoUrl" loop muted autoplay></video>
+      <video
+        #videoPlayer
+        class="card-video"
+        [src]="player.videoUrl || null"
+        loop
+        muted
+        playsinline
+      ></video>
     </div>
 
     <div class="card-data">
