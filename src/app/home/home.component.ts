@@ -63,7 +63,7 @@ export class HomeComponent {
       dorsal: 11,
       posicion: 'Extremo',
       photoUrl: 'assets/imagenes/jugadora3.png',
-      videoUrl: 'assets/video/video-jugadora3.mp4',
+      videoUrl: 'assets/video/video-jugadora3.2.mp4',
     },
     {
       name: 'Andrea Vidal',
