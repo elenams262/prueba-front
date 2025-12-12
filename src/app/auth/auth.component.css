@@ -1,24 +1,28 @@
 .auth-container {
   position: relative;
   /* background-attachment: fixed; Removed to allow scrolling to see full image */
-  min-height: calc(100vh - 100px); /* Full height minus nav */
+  min-height: 100vh; /* Full height minus nav */
   width: 100%;
   overflow-x: hidden;
-  margin-top: -100px;
-  padding-top: 100px;
+  margin-top: -150px;
+  padding-top: 150px;
   overflow: hidden; /* Ensure blur doesn't bleed */
+  background-color: rgb(16, 173, 50); /* Background color to hide global sharp image */
+  z-index: 0; /* Create stacking context so ::before sits on top of this bg but this covers global bg */
+  margin-bottom: -50px; /* Counteract parent padding-bottom to cover the gap */
+  padding-bottom: 100px; /* Space between form and bottom */
 }
 
 .auth-container::before {
   content: '';
   position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
   background-image: url('../../assets/imagenes/infantil-femenino.png');
-  background-size: 100% auto;
-  background-position: top center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   filter: blur(5px);
   z-index: -1;
