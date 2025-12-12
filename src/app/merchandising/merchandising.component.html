@@ -1,0 +1,35 @@
+<div class="container fade-in pb-5">
+  <div class="text-center mb-5">
+    <h2 class="text-yellow-brand text-center p-1 text-uppercase">Tienda Oficial</h2>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let producto of productos">
+      <div class="card h-100 border-0 shadow-sm product-card">
+        <div class="card-img-wrapper position-relative text-center p-3 bg-light">
+          <img
+            [src]="producto.imagen"
+            class="card-img-top product-img"
+            [alt]="producto.nombre"
+            onerror="this.src='assets/escudos/logo-udvillalba.png'"
+          />
+          <div class="price-badge badge bg-success position-absolute top-0 end-0 m-3 fs-6">
+            {{ producto.precio | currency : 'EUR' }}
+          </div>
+        </div>
+        <div class="card-body d-flex flex-column p-4 text-center">
+          <h5 class="card-title fw-bold mb-2 text-dark">{{ producto.nombre }}</h5>
+          <p class="card-text text-secondary mb-4 flex-grow-1 small">
+            {{ producto.descripcion }}
+          </p>
+          <button
+            class="btn btn-outline-success w-100 rounded-pill fw-bold"
+            (click)="agregarAlCarrito(producto)"
+          >
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
