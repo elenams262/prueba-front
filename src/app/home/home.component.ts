@@ -77,7 +77,7 @@ export class HomeComponent {
       dorsal: 9,
       posicion: 'Mediapunta',
       photoUrl: 'assets/imagenes/jugadora4.png',
-      videoUrl: 'assets/video/video-jugadora4.mp4',
+      videoUrl: 'assets/video/video-jugadora4.2.mp4',
     },
     {
       name: 'Alba Hernandez',
