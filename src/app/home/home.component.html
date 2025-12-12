@@ -4,32 +4,7 @@
 
 <div class="card-grid">
   @for (player of playerSquad(); track player.name) {
-
-  <div
-    class="player-card"
-    (mouseenter)="onMouseEnter(videoPlayer)"
-    (mouseleave)="onMouseLeave(videoPlayer)"
-  >
-    <div class="media-container">
-      <img class="card-image" [src]="player.photoUrl" [alt]="player.name" />
-      <video
-        #videoPlayer
-        class="card-video"
-        [src]="player.videoUrl || null"
-        loop
-        muted
-        playsinline
-      ></video>
-    </div>
-
-    <div class="card-data">
-      <h3>{{ player.name }}</h3>
-      <p>
-        <span>Dorsal:</span> <strong>{{ player.dorsal }}</strong>
-      </p>
-      <p><span>Posición:</span> {{ player.posicion }}</p>
-    </div>
-  </div>
+  <app-player-card [player]="player"></app-player-card>
   }
 </div>
 

@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CarritoService } from './carrito.service';
+import { Product } from '../models/product.model';
 
 @Component({
   selector: 'app-carrito',
@@ -12,7 +13,7 @@ import { CarritoService } from './carrito.service';
 })
 export class CarritoComponent implements OnInit {
   private carritoService = inject(CarritoService);
-  items: any[] = [];
+  items: Product[] = [];
   total: number = 0;
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class CarritoComponent implements OnInit {
     });
   }
 
-  eliminar(item: any) {
+  eliminar(item: Product) {
     this.carritoService.removeFromCart(item);
   }
 
