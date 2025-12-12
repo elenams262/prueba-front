@@ -32,8 +32,8 @@ export class PlayerService {
         name: 'María López',
         dorsal: 7,
         posicion: 'Delantera',
-        photoUrl: 'assets/imagenes/jugadora2.png',
-        videoUrl: 'assets/video/video-jugadora2.mp4',
+        photoUrl: 'assets/imagenes/jugadora1.png',
+        videoUrl: 'assets/video/video-jugadora1.mp4',
       },
       {
         name: 'Lucía Castro',
@@ -54,7 +54,7 @@ export class PlayerService {
         dorsal: 11,
         posicion: 'Extremo',
         photoUrl: 'assets/imagenes/jugadora3.png',
-        videoUrl: 'assets/video/video-jugadora3.mp4',
+        videoUrl: 'assets/video/video-jugadora3.2.mp4',
       },
       {
         name: 'Andrea Vidal',
@@ -67,15 +67,15 @@ export class PlayerService {
         name: 'Irene Montes',
         dorsal: 9,
         posicion: 'Mediapunta',
-        photoUrl: 'assets/imagenes/jugadora1.png',
-        videoUrl: 'assets/video/video-jugadora1.mp4',
+        photoUrl: 'assets/imagenes/jugadora4.png',
+        videoUrl: 'assets/video/video-jugadora4.2.mp4',
       },
       {
         name: 'Alba Hernandez',
         dorsal: 12,
         posicion: 'Defensa Central',
-        photoUrl: 'assets/imagenes/jugadora2.png',
-        videoUrl: 'assets/video/video-jugadora2.mp4',
+        photoUrl: 'assets/imagenes/jugadora6.png',
+        videoUrl: 'assets/video/video-jugadora6.mp4',
       },
       {
         name: 'Susana Rodriguez',
@@ -88,8 +88,8 @@ export class PlayerService {
         name: 'María Gonzalez',
         dorsal: 11,
         posicion: 'Defensa Central',
-        photoUrl: 'assets/imagenes/jugadora6.png',
-        videoUrl: 'assets/video/video-jugadora6.mp4',
+        photoUrl: 'assets/imagenes/jugadora2.png',
+        videoUrl: 'assets/video/video-jugadora2.mp4',
       },
     ];
   }
