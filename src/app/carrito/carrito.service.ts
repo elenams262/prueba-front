@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CarritoService {
-  private items: any[] = [];
-  private cartSubject = new BehaviorSubject<any[]>([]);
+  private items: Product[] = [];
+  private cartSubject = new BehaviorSubject<Product[]>([]);
 
   public items$ = this.cartSubject.asObservable();
 
-  addToCart(product: any) {
+  addToCart(product: Product) {
     this.items.push(product);
     this.cartSubject.next(this.items);
   }
 
-  removeFromCart(product: any) {
+  removeFromCart(product: Product) {
     const index = this.items.indexOf(product);
     if (index > -1) {
       this.items.splice(index, 1);
@@ -23,7 +24,7 @@ export class CarritoService {
     }
   }
 
-  getItems() {
+  getItems(): Product[] {
     return this.items;
   }
 
@@ -33,7 +34,7 @@ export class CarritoService {
     return this.items;
   }
 
-  getTotal() {
+  getTotal(): number {
     return this.items.reduce((total, item) => total + item.precio, 0);
   }
 }

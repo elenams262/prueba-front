@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MerchandisingService {
-  getProductos() {
+  getProductos(): Product[] {
     return [
       {
         id: 1,

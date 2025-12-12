@@ -1,0 +1,67 @@
+/* --- 2. Estilo de la Tarjeta Individual --- */
+.player-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 3. Contenedor de Imagen/Video --- */
+.media-container {
+  height: 450px;
+  position: relative;
+}
+
+/* Reglas de Superposición para Imagen y Video */
+.card-image,
+.card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Estado Inicial: Video oculto */
+.card-video {
+  opacity: 0;
+}
+
+/* EFECTO HOVER: Muestra el video y oculta la imagen */
+.player-card:hover .card-video {
+  opacity: 1;
+}
+
+.player-card:hover .card-image {
+  opacity: 0;
+}
+
+/* --- 4. Estilos de los Datos de la Jugadora (Parte de abajo) --- */
+.card-data {
+  padding: 15px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.card-data h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #10a108;
+}
+
+.card-data p {
+  margin: 3px 0;
+  font-size: 0.9em;
+}
+
+.card-data span {
+  font-weight: 600;
+}
